@@ -10,39 +10,39 @@ import java.util.List;
 @RestController
 @RequestMapping("/music")
 public class MusicController {
-    private  final MusicService musicService;
+    private final MusicService musicService;
 
     public MusicController(MusicService musicService) {
         this.musicService = musicService;
     }
 
     @PostMapping
-    public boolean save(@RequestBody Music music){
+    public boolean save(@RequestBody Music music) {
         return musicService.save(music);
     }
 
     @GetMapping("/{id}")
-    public Music getById(Long id){
+    public Music getById(Long id) {
         return musicService.getById(id);
     }
 
     @GetMapping
-    public List<Music> list(){
+    public List<Music> list() {
         return musicService.list();
     }
 
     @GetMapping("/page")
-    public Page<Music> page(int pageIndex, int pageSize){
-        return musicService.page(pageIndex,pageSize);
+    public Page<Music> page(int pageIndex, int pageSize) {
+        return musicService.page(pageIndex, pageSize);
     }
 
     @PutMapping
-    public boolean update(@RequestBody Music music){
+    public boolean update(@RequestBody Music music) {
         return musicService.update(music);
     }
 
     @DeleteMapping("/{id}")
-    public void delete(Long id){
-         musicService.delete(id);
+    public void delete(Long id) {
+        musicService.delete(id);
     }
 }

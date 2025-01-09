@@ -8,7 +8,6 @@ import lombok.Data;
 
 @Data
 public class MusicSheet {
-
     @TableId(type = IdType.AUTO)
     private Long id;
     private Long musicId;

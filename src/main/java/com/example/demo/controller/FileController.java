@@ -16,12 +16,12 @@ public class FileController {
     }
 
     @PostMapping("/upload")
-    public String uploadFile(FileUploadDTO fileUploadDTO){
-        try{
-            var fileName = minioService.uploadMusicSheetFile(fileUploadDTO.getFile(),fileUploadDTO.getMusicId());
-        }catch (Exception e){
+    public String uploadFile(FileUploadDTO fileUploadDTO) {
+        try {
+            var fileName = minioService.uploadMusicSheetFile(fileUploadDTO.getFile(), fileUploadDTO.getMusicId());
+        } catch (Exception e) {
             e.printStackTrace();
         }
-        return  "success";
+        return "success";
     }
 }
