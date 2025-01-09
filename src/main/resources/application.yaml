@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/demo
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: admin1111
+minio:
+  endpoint: http://localhost:9000
+  accessKey: admin1111
+  secretKey: admin1111
+  bucketName: files
